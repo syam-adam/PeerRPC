@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package p2p;
+
+service Peer {
+  rpc Announce (AnnounceRequest) returns (AnnounceResponse);
+}
+
+message AnnounceRequest {
+  string from_addr = 1;
+}
+
+message AnnounceResponse {
+  string message = 1;
+}
